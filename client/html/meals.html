@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fitness Tracker</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals</title>
     <link
       rel="stylesheet"
       href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -17,11 +17,14 @@
       .navbar-dark .navbar-nav .nav-link {
         color: rgb(11, 238, 124) !important;
       }
-    
+      /* .navbar-nav .nav-item {
+  margin-left: 15px;
+  margin-right: 15px;
+} */
+
       html, body {
-       height: 100%;
+        height: 100%;
       }
-    
       body {
         display: flex;
         flex-direction: column;
@@ -32,15 +35,9 @@
       footer {
         margin-top: auto;
       }
-      img {
-        width: 100% !important;
-        height: 500px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- Navigation Header-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <button
@@ -56,11 +53,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active mx-2">
-            <a class="nav-link" href="#">Home</a>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="meals.html">Meals</a>
+            <a class="nav-link active" href="meals.html">Meals</a>
           </li>
           <li class="nav-item mx-2">
             <a class="nav-link disabled" href="#">Trainings</a>
@@ -75,19 +72,14 @@
       </div>
     </nav>
 
-    <!-- jumbotron -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container-fluid p-0">
-        <img
-          src="/client/images/banner.png"
-          alt="Fitness Tracker Logo"
-          class="img-fluid w-100"
-        />
+    <!-- Main Content -->
+    <main class="flex-fill">
+      <div class="container mt-5 pt-5">
+        <h1>Meals Page</h1>
+        <p>Welcome to the meals section of your fitness tracker.</p>
+        <!-- Add your meals content here -->
       </div>
-    </div>
-
-    <!-- Dashboard -->
-     <h4 style="text-align: center; margin-top: 30px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: green;">🎯 Family Dashboard 🎯</h2>
+    </main>
 
     <!-- Footer -->
     <div class="container">
@@ -116,5 +108,5 @@
         </ul>
       </footer>
     </div>
-  </body>
+</body>
 </html>
