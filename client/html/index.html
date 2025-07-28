@@ -17,21 +17,12 @@
       .navbar-dark .navbar-nav .nav-link {
         color: rgb(11, 238, 124) !important;
       }
-      .jumbotron {
-        padding: 0 !important;
+
+      img {
+        width: 100% !important;
+        height: 500px !important;
         margin: 0 !important;
-        background: none !important;
-      }
-      .jumbotron .container {
-        max-width: 100% !important;
         padding: 0 !important;
-        margin: 0 !important;
-      }
-      .jumbotron img {
-        width: 100vw !important;
-        height: 100vh !important;
-        object-fit: cover !important;
-        display: block !important;
       }
     </style>
   </head>
@@ -73,8 +64,43 @@
     <!-- jumbotron -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container-fluid p-0">
-        <img src="/client/images/banner.png" alt="Fitness Tracker Logo" class="img-fluid w-100" />
+        <img
+          src="/client/images/banner.png"
+          alt="Fitness Tracker Logo"
+          class="img-fluid w-100"
+        />
       </div>
+    </div>
+
+    <!-- Dashboard -->
+     <h4 style="text-align: center; margin-top: 30px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: green;">🎯 Family Dashboard 🎯</h2>
+
+    <!-- Footer -->
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a
+            href="/"
+            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+            aria-label="Bootstrap">
+            <svg class="bi" width="30" height="24" aria-hidden="true">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-body-secondary" href="#" aria-label="Instagram"
+              ><svg class="bi" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#instagram"></use></svg></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use></svg></a>
+          </li>
+        </ul>
+      </footer>
     </div>
   </body>
 </html>
