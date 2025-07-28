@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Tracker</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <style>
+      .navbar-dark .navbar-nav .nav-link {
+        color: rgb(11, 238, 124) !important;
+      }
+      .jumbotron {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: none !important;
+      }
+      .jumbotron .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .jumbotron img {
+        width: 100vw !important;
+        height: 100vh !important;
+        object-fit: cover !important;
+        display: block !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Header-->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Meals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Trainings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Goals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Dashboard</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container-fluid p-0">
+        <img src="/client/images/banner.png" alt="Fitness Tracker Logo" class="img-fluid w-100" />
+      </div>
+    </div>
+  </body>
+</html>
