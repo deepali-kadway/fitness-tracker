@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Meals</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <style>
+        .navbar-dark .navbar-nav .nav-link {
+        color: rgb(11, 238, 124) !important;
+      }
+
+       html, body {
+       height: 100%;
+      }
+       body {
+        display: flex;
+        flex-direction: column;
+        padding-top: 70px; /* Add padding to account for fixed navbar */
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        min-height: 100vh; /* Ensure body takes full viewport height */
+      }
+      main {
+        flex: 1; /* This will push the footer to the bottom */
+      }
+      #mealItems{
+        font-weight:700;
+        font-size: 25px;
+        color: rgb(0, 0, 0);
+      }
+      #mealSubmit{
+        width: 300px; max-width: 90%; background-color: rgb(21, 165, 93);
+        border: none;
+        font-weight: bold;
+      }
+      #mealSubmit:hover {
+        background-color: rgb(0, 128, 0);
+      }
+      footer {
+        margin-top: auto;
+      }
+    </style>
+</head>
+<body>
+     <!-- Navigation Header-->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active mx-2">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="meals.html">Meals</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link disabled" href="#">Trainings</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link disabled" href="#">Goals</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link disabled" href="#">Dashboard</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+   
+    <main>
+    <!-- Accordian - for meal entries -->
+     <h4 style="text-align: center; font-weight:bold; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: green;">🍴Log Your Meals🍴</h4>
+    <div class="accordion" id="mealAccordion">
+
+      <!-- Breakfast -->
+      <div class="accordion-item mb-2"> 
+        <h2 class="accordion-header d-flex justify-content-between align-items-center px-3 py-2">
+          <span id="mealItems">Breakfast</span>
+          <button class="btn btn-link toggle-icon collapsed" data-bs-toggle="collapse" data-bs-target="#breakfastCollapse" aria-expanded="false">
+            +
+          </button>
+        </h2>
+        <div id="breakfastCollapse" class="accordion-collapse collapse" data-bs-parent="#mealAccordion">
+          <div class="accordion-body">
+            <input type="text" class="form-control mb-2" placeholder="Search breakfast items...">
+            <!-- Add your search logic here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch -->
+      <div class="accordion-item mb-2">
+        <h2 class="accordion-header d-flex justify-content-between align-items-center px-3 py-2">
+          <span id="mealItems">Lunch</span>
+          <button class="btn btn-link toggle-icon collapsed" data-bs-toggle="collapse" data-bs-target="#lunchCollapse" aria-expanded="false">
+            +
+          </button>
+        </h2>
+        <div id="lunchCollapse" class="accordion-collapse collapse" data-bs-parent="#mealAccordion">
+          <div class="accordion-body">
+            <input type="text" class="form-control mb-2" placeholder="Search lunch items...">
+          </div>
+        </div>
+      </div>
+
+      <!-- Snacks -->
+      <div class="accordion-item mb-2">
+        <h2 class="accordion-header d-flex justify-content-between align-items-center px-3 py-2">
+          <span id="mealItems">Snacks</span>
+          <button class="btn btn-link toggle-icon collapsed" data-bs-toggle="collapse" data-bs-target="#snacksCollapse" aria-expanded="false">
+            +
+          </button>
+        </h2>
+        <div id="snacksCollapse" class="accordion-collapse collapse" data-bs-parent="#mealAccordion">
+          <div class="accordion-body">
+            <input type="text" class="form-control mb-2" placeholder="Search snacks...">
+          </div>
+        </div>
+      </div>
+
+      <!-- Dinner -->
+      <div class="accordion-item mb-2">
+        <h2 class="accordion-header d-flex justify-content-between align-items-center px-3 py-2">
+          <span id="mealItems">Dinner</span>
+          <button class="btn btn-link toggle-icon collapsed" data-bs-toggle="collapse" data-bs-target="#dinnerCollapse" aria-expanded="false">
+            +
+          </button>
+        </h2>
+        <div id="dinnerCollapse" class="accordion-collapse collapse" data-bs-parent="#mealAccordion">
+          <div class="accordion-body">
+            <input type="text" class="form-control mb-2" placeholder="Search dinner items...">
+          </div>
+        </div>
+      </div>
+
+    <div class="d-flex justify-content-center my-4">
+      <button type="submit" class="btn btn-primary" id="mealSubmit">Submit</button>
+    </div>
+    </main>
+
+     <!-- Footer -->
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a
+            href="/"
+            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+            aria-label="Bootstrap">
+            <svg class="bi" width="30" height="24" aria-hidden="true">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-body-secondary" href="#" aria-label="Instagram"
+              ><svg class="bi" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#instagram"></use></svg></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use></svg></a>
+          </li>
+        </ul>
+      </footer>
+</body>
+</html>
