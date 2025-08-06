@@ -1,4 +1,8 @@
 .env
 server.js
 package.json
+package-lock.json
 node_modules/
+routes.rest
+src/
+src/routes/
